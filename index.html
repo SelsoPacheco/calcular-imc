@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js for the graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-weight"></i> Cálculo de IMC</h1>
+        <form id="imcForm">
+            <div class="input-group">
+                <label for="peso"><i class="fas fa-weight-hanging"></i> Peso (kg)</label>
+                <input type="number" id="peso" required>
+            </div>
+            <div class="input-group">
+                <label for="altura"><i class="fas fa-ruler-combined"></i> Altura (m)</label>
+                <input type="number" step="0.01" id="altura" required>
+            </div>
+            <button type="submit"><i class="fas fa-calculator"></i> Calcular IMC</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <p id="imcValue">IMC: --</p>
+            <p id="categoria">--</p>
+            <canvas id="imcChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="dicas">
+            <!-- Imagem atrativa sobre saúde ou fitness -->
+            <img src="imc.jpg" alt="Exercício e saúde" class="imagem-dica">
+            <p>Manter um IMC saudável é importante para sua saúde geral. Se você está acima do peso ou abaixo do peso, considere consultar um profissional para mais orientações sobre sua saúde.</p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
